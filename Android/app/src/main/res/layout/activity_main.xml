@@ -5,13 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/white"
+    android:background="@drawable/nig"
+    android:alpha="180"
     android:fitsSystemWindows="true"
     >
-
-    <androidx.core.widget.NestedScrollView
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#55FFFFFF"
+        app:cardBackgroundColor="#FFFFFF"
+        android:backgroundTint="#33FFFFFF">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,41 +27,44 @@
             android:padding="20dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Profile Setup"
-                android:textColor="@android:color/black"
-                android:textSize="26sp"
-                android:textStyle="bold" />
-
-            <TextView
+                android:id="@+id/welcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="35dp"
-                android:text="Welcome!!"
-                android:textColor="@android:color/black"
+                android:text="Welcome 👏"
+                android:textColor="#0F172A"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/complete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="6dp"
-                android:text="Complete your profile to continue"
-                android:textColor="#9E9E9E"
-                android:textSize="14sp" />
+                android:text="Let's set up your profile"
+                android:textColor="#64748B"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/tvUserNameInline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16sp"
+                android:textColor="#E5FFFFFF"
+                android:textStyle="bold"
+                android:visibility="gone" />
 
             <ImageView
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="32dp"
-                android:background="@drawable/bg_profile_image"
+                android:background="@drawable/po"
                 android:padding="26dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/userr" />
+                android:scaleType="centerCrop" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -62,7 +72,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="24dp"
                 android:text="Name"
-                android:textColor="@android:color/black"
+                android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -70,24 +80,25 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:hintEnabled="false"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidth="1dp"
                 android:layout_marginTop="4dp"
-                app:boxCornerRadiusTopStart="12dp"
-                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
                 app:boxCornerRadiusBottomStart="12dp"
-                app:boxCornerRadiusBottomEnd="12dp">
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxBackgroundColor="#F1F5F9"
+                app:boxStrokeColor="#CBD5E1"
+                app:boxStrokeWidth="1dp"
+                app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter your name"
-                    android:textColorHint="#A4A4A4"
-                    android:textColor="@color/black"
                     android:inputType="textPersonName"
-                    android:padding="16dp" />
+                    android:padding="16dp"
+                    android:textColor="#0F172A"
+                    android:textColorHint="#94A3B8" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -98,7 +109,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginTop="20dp"
                 android:text="Age"
-                android:textColor="@android:color/black"
+                android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -106,33 +117,34 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:hintEnabled="false"
-                app:boxStrokeColor="@color/black"
-                app:boxStrokeWidth="1dp"
                 android:layout_marginTop="4dp"
-                app:boxCornerRadiusTopStart="12dp"
-                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
                 app:boxCornerRadiusBottomStart="12dp"
-                app:boxCornerRadiusBottomEnd="12dp">
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="@color/white"
+                app:boxBackgroundColor="#F1F5F9"
+                app:boxStrokeWidth="1dp"
+                app:hintEnabled="false">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etAge"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter your age"
-                    android:textColorHint="#A4A4A4"
-                    android:textColor="@color/black"
                     android:inputType="number"
-                    android:padding="16dp" />
+                    android:padding="16dp"
+                    android:textColor="#0F172A"
+                    android:textColorHint="#94A3B8" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
                 android:layout_marginHorizontal="2dp"
-                app:cardBackgroundColor="#f4f4f4"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="#F8FAFC"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="2dp">
 
@@ -153,7 +165,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Verification Status"
-                            android:textColor="@android:color/black"
+                            android:textColor="#94A3B8"
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
@@ -163,7 +175,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Not verified"
-                            android:textColor="#E53935"
+                            android:textColor="#FF0400"
                             android:textSize="13sp" />
                     </LinearLayout>
 
@@ -185,16 +197,15 @@
                 android:id="@+id/btnContinue"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:backgroundTint="@color/black"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#3DA9FC"
                 android:text="Continue"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
-                android:layout_marginTop="60dp"
                 android:textStyle="bold"
-                app:cornerRadius="10dp" />
+                app:cornerRadius="16dp" />
         </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
+    </com.google.android.material.card.MaterialCardView>
 </LinearLayout>
+
 

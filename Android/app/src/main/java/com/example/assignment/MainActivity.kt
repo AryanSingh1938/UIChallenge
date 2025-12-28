@@ -51,6 +51,18 @@ class MainActivity : AppCompatActivity() {
             isVerified = true
             tvStatus.text = "Verified"
             tvStatus.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+
+            val tvTitle = findViewById<TextView>(R.id.welcome)
+            val tvSubtitle = findViewById<TextView>(R.id.complete)
+
+
+            isVerified = true
+            tvStatus.text = "Verified"
+            tvStatus.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+
+            tvTitle.text = "Welcome ${name}"
+            tvSubtitle.text = "Profile verified successfully"
+
         }
         val btnContinue = findViewById<Button>(R.id.btnContinue)
         btnContinue.setOnClickListener {
@@ -66,5 +78,9 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("AGE", etAge.text.toString().trim())
             startActivity(intent)
         }
+
+
+
+
     }
 }
